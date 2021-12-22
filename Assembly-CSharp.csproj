@@ -52,16 +52,20 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Main.cs" />
-     <Compile Include="Assets\Scripts\Graph\VexNode.cs" />
-     <Compile Include="Assets\Scripts\Search\Dijkstra.cs" />
      <Compile Include="Assets\Scripts\Graph\Node.cs" />
-     <Compile Include="Assets\Scripts\Search\Floyd.cs" />
-     <Compile Include="Assets\Scripts\Graph\AdjacencyListNode.cs" />
-     <Compile Include="Assets\Scripts\Graph\Graph.cs" />
-     <Compile Include="Assets\Scripts\Search\DFS.cs" />
-     <Compile Include="Assets\Scripts\Search\BFS.cs" />
      <Compile Include="Assets\Scripts\Search\AStar.cs" />
+     <Compile Include="Assets\Scripts\Search\Dijkstra.cs" />
+     <Compile Include="Assets\Scripts\Search\BFS.cs" />
+     <Compile Include="Assets\Scripts\UI\NodeItem.cs" />
+     <Compile Include="Assets\Scripts\Graph\VexNode.cs" />
+     <Compile Include="Assets\Scripts\Graph\IGraph.cs" />
+     <Compile Include="Assets\Scripts\Search\Floyd.cs" />
+     <Compile Include="Assets\Scripts\UI\EdgeItem.cs" />
+     <Compile Include="Assets\Scripts\Search\DFS.cs" />
+     <Compile Include="Assets\Scripts\Main.cs" />
+     <Compile Include="Assets\Scripts\Graph\Graph.cs" />
+     <Compile Include="Assets\Scripts\Graph\AdjacencyNode.cs" />
+     <Compile Include="Assets\Scripts\Search\SPFA.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.11f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

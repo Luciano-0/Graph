@@ -4,12 +4,12 @@
 /// <typeparam name="T"></typeparam>
 public class VexNode<T>
 {
-    public VexNode(Node<T> data, AdjListNode<T> adjList =null)
+    public VexNode(Node<T> data, AdjNode<T> adjNode = null)
     {
         Data = data;
-        FirstAdjListNode = adjList;
+        FirstAdjNode = adjNode;
     }
-    public Node<T> Data { get; set; }
-    public AdjListNode<T> FirstAdjListNode { get; set; }
-    
+
+    public Node<T> Data { get; }
+    public AdjNode<T> FirstAdjNode { get; set; }
 }

@@ -1,18 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class BFS : MonoBehaviour
+public static class BFS<T>
 {
-    // Start is called before the first frame update
-    void Start()
+    public static List<Node<T>> BFSSearchRecursive(Graph<T> graph, Node<T> start)
     {
-        
-    }
+        if (graph == null || graph.NodeNum == 0)
+        {
+            Debug.LogError("图为空！");
+            return new List<Node<T>>();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        var queue = new Queue<Node<T>>();
+        var visited = new HashSet<Node<T>>();
+        var res = new List<Node<T>>();
+        queue.Enqueue(start);
+        while (queue.Count > 0)
+        {
+            var node = queue.Dequeue();
+            if (visited.Contains(node)) continue;
+            visited.Add(node);
+            res.Add(node);
+            var adjNode = graph[node].FirstAdjNode;
+            while (adjNode != null)
+            {
+                queue.Enqueue(adjNode.Data);
+                adjNode = adjNode.Next;
+            }
+        }
+        return res;
     }
 }
